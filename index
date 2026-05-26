@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    // Pega o link que vier depois do "?url="
+    const params = new URLSearchParams(window.location.search);
+    const linkFilme = params.get('url');
+
+    if (linkFilme) {
+      // Redireciona o navegador para o link direto extraído
+      window.location.replace(linkFilme);
+    } else {
+      document.body.innerHTML = "Link não configurado.";
+    }
+  </script>
+</body>
+</html>
